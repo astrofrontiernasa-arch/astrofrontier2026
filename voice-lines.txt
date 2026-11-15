@@ -1,0 +1,105 @@
+===== Chapter 1 =====
+s01-01.mp3  [narr]  In a little house lived a girl named Shasha, who loved everything about space.
+s01-03.mp3  [narr]  Every night, she gazed at the Moon, dreaming of visiting it one day.
+s01-05.mp3  [shasha]  Look at the Moon, Miaw Miaw! I wish we could go there!
+s01-10.mp3  [narr]  Little did Shasha know, her dream was about to come true.
+s02-02.mp3  [narr]  Suddenly, a strange light appeared outside Shasha's window.
+s02-03.mp3  [narr]  Something was landing in the garden!
+s02-05.mp3  [shasha]  What's that?!
+s02-07.mp3  [shasha]  Look, Miaw Miaw! A rocket!
+s02-09.mp3  [shasha]  Let's see where it takes us!
+s02-14.mp3  [narr]  And so, their incredible adventure began.
+s02-16.mp3  [narr]  The rocket travelled farther and farther away from Earth.
+s02-18.mp3  [narr]  Soon, the Moon appeared in front of them.
+s02-19.mp3  [narr]  Its enormous grey surface was covered with craters, mountains and endless dusty plains.
+s03-04.mp3  [narr]  The rocket landed safely on the Moon.
+s03-06.mp3  [narr]  Shasha couldn't believe her eyes!
+s03-09.mp3  [narr]  As they explored, Shasha spotted something strange in the distance.
+s03-11.mp3  [shasha]  What's that over there?
+s04-02.mp3  [eagle]  Well, hello there, little explorer!
+s04-05.mp3  [shasha]  YOU CAN TALK?!
+s04-06.mp3  [eagle]  My name is Eagle. I was the Lunar Module of Apollo 11!
+s04-07.mp3  [shasha]  Wait! You're the one that brought the first astronauts to the Moon?
+s04-08.mp3  [eagle]  That's right! I carried Neil Armstrong, Buzz Aldrin and Michael Collins to this very spot.
+s05-02.mp3  [eagle]  My adventure began on July 16, 1969, when Apollo 11 launched from Earth!
+s05-08.mp3  [eagle]  Three brave astronauts joined the mission: Neil Armstrong, Buzz Aldrin and Michael Collins.
+s05-10.mp3  [eagle]  After a careful descent, I finally landed at Tranquility Base on July 20, 1969!
+s05-11.mp3  [shasha]  That's incredible! You're part of history!
+s05-14.mp3  [eagle]  But the greatest moment was yet to come. Neil Armstrong was about to step onto the Moon!
+s05-17.mp3  [eagle]  On July 21, 1969 (UTC), humanity took its first steps on the Moon!
+s06-02.mp3  [shasha]  What's all that equipment?
+s06-05.mp3  [eagle]  Those are scientific instruments left behind to help scientists study the Moon like moonquakes, lunar dust and even measure the distance between Earth and the Moon!
+s06-10.mp3  [shasha]  Wow! You all had such important jobs!
+s07-02.mp3  [shasha]  So you've been here all alone ever since?
+s07-03.mp3  [eagle]  Yes. But I helped make history. My mission will never be forgotten.
+s07-04.mp3  [shasha]  Don't worry, Eagle. I'll tell everyone your story!
+s07-05.mp3  [eagle]  Thank you, little explorer. Even when a mission ends, its story lives on.
+s07-07.mp3  [shasha]  Bye-bye, Eagle!
+s07-09.mp3  [eagle]  Shasha, will you promise to find the other forgotten explorers scattered across the stars and share their stories too?
+s07-10.mp3  [shasha]  I promise, Eagle!
+
+===== Chapter 2 =====
+c2s01-02.mp3  [narr]  After saying goodbye to the little Eagle, their next destination was a mysterious world: the Red Planet!
+c2s01-05.mp3  [shasha]  Look, Miaw Miaw! We're going to Mars!
+c2s02-02.mp3  [narr]  Their first stop was Gusev Crater, where scientists believed water might have once flowed.
+c2s02-04.mp3  [shasha]  We're on Mars! Where's our explorer?
+c2s02-09.mp3  [narr]  Among the rocks sat a little robotic explorer, waiting to share its story.
+c2s02-13.mp3  [shasha]  Hello! Are you our Mars explorer?
+c2s02-16.mp3  [spirit]  Hello! I'm Spirit, a Mars Exploration Rover!
+c2s03-02.mp3  [spirit]  I arrived on Mars on January 3, 2004, at a place called Gusev Crater.
+c2s03-05.mp3  [spirit]  Scientists chose this crater because they thought water might have existed here long ago. My mission was to search for clues of Mars' watery past.
+c2s03-07.mp3  [shasha]  So you travelled all the way from Earth to search for signs of water?
+c2s03-10.mp3  [spirit]  That's right! I explored rocks and soil to help scientists understand what Mars was like long ago.
+c2s03-17.mp3  [shasha]  That's amazing! Can you show us what you discovered?
+c2s03-20.mp3  [spirit]  Of course! Come along, little explorers. My adventures are just beginning!
+c2s04-02.mp3  [narr]  Spirit travelled across Mars, studying rocks and soil to uncover clues about the planet's ancient past.
+c2s04-04.mp3  [spirit]  Every rock tells a story! I studied them to search for signs of ancient water.
+c2s04-05.mp3  [shasha]  Are you searching for discoveries too?
+c2s04-06.mp3  [spirit]  Near a place called Home Plate, I discovered soil rich in silica. Scientists believe it formed through ancient hot-water activity, much like hot springs on Earth!
+c2s04-10.mp3  [shasha]  Hot springs on Mars? So Mars once had warm, watery places too?
+c2s05-02.mp3  [narr]  Spirit worked for years, sending thousands of pictures and valuable scientific information back to Earth.
+c2s05-03.mp3  [narr]  Its discoveries helped scientists understand how water, volcanoes and rocks had shaped ancient Mars.
+c2s05-06.mp3  [spirit]  I kept exploring until March 2010, when I stopped communicating with Earth after I got trapped in the soft soil.
+c2s05-09.mp3  [shasha]  Oh, no...
+c2s05-11.mp3  [spirit]  My journey eventually ended, and I became silent here on Mars. But my discoveries continued helping scientists understand this planet.
+c2s05-15.mp3  [shasha]  You may be silent now, Spirit, but your discoveries are still helping us learn about Mars. Your story is still alive!
+c2s05-17.mp3  [spirit]  Thank you, little explorer. Keep sharing my story, so my adventures and discoveries will never be forgotten!
+c2s05-19.mp3  [shasha]  Where is your twin, Opportunity?
+c2s05-20.mp3  [spirit]  At Meridiani Planum, on the other side of Mars!
+c2s05-21.mp3  [shasha]  Let's go find Opportunity!
+c2s05-24.mp3  [spirit]  Goodbye! Send my best wishes to Opportunity!
+c2s06-02.mp3  [shasha]  I wonder what Opportunity is like. Is it just like Spirit?
+c2s06-05.mp3  [shasha]  They're twins, so maybe they look exactly alike!
+c2s06-07.mp3  [narr]  At last, they reached Meridiani Planum, a region where minerals suggested that water had once existed.
+c2s06-08.mp3  [shasha]  Opportunity! We're here!
+c2s06-13.mp3  [shasha]  Hello, Opportunity! We've come to hear your story!
+c2s06-16.mp3  [opp]  Well, hello there! It's been a long time since I've had visitors!
+c2s06-18.mp3  [shasha]  Spirit told us about your adventures!
+c2s06-20.mp3  [opp]  We explored different parts of Mars, searching for signs of ancient water.
+c2s06-22.mp3  [shasha]  How far have you travelled?
+c2s06-23.mp3  [opp]  About 45.16 kilometres!
+c2s06-26.mp3  [shasha]  Wow! That's a long journey!
+c2s07-02.mp3  [opp]  I arrived on January 24, 2004, at a place where scientists had found clues of an ancient wet environment.
+c2s07-05.mp3  [opp]  I studied the rocks around me, searching for clues about Mars' watery past.
+c2s07-07.mp3  [opp]  I found evidence that liquid water had once changed these rocks long ago!
+c2s07-11.mp3  [shasha]  So you found clues about ancient water too, just like Spirit!
+c2s07-15.mp3  [opp]  That's right! Although we explored different places, we helped scientists discover more about Mars together.
+c2s07-18.mp3  [opp]  There's much more to discover! Come along, and I'll show you my next adventure!
+c2s08-02.mp3  [narr]  Opportunity was designed for a short mission, but it explored Mars for many years.
+c2s08-04.mp3  [opp]  I travelled across vast plains, explored craters and searched for clues about ancient Mars!
+c2s08-06.mp3  [opp]  I even explored a huge crater called Endurance, discovering more clues about Mars's watery past!
+c2s08-12.mp3  [shasha]  Wow! Exploring such a huge crater must have been challenging!
+c2s09-02.mp3  [narr]  Opportunity relied on sunlight for power, but dust sometimes covered its solar panels, reducing the energy it could collect.
+c2s09-04.mp3  [opp]  Sometimes, Martian winds came to my rescue by sweeping dust off my panels!
+c2s09-06.mp3  [opp]  In March 2014, I captured a self-portrait showing my cleaner solar panels!
+c2s09-10.mp3  [shasha]  How wonderful! Even the wind helped you continue your adventure!
+c2s10-05.mp3  [opp]  I travelled an incredible 45.16 kilometres across Mars!
+c2s10-10.mp3  [shasha]  Wow! That's farther than Spirit!
+c2s10-12.mp3  [narr]  Eventually, a huge dust storm covered Mars, blocking sunlight from Opportunity's solar panels.
+c2s10-16.mp3  [opp]  I needed sunlight to recharge, but the dust storm made it difficult.
+c2s10-19.mp3  [shasha]  Oh no! What happened next?
+c2s10-20.mp3  [opp]  I sent my last signal to Earth on June 10, 2018.
+c2s11-02.mp3  [shasha]  So... your journey ended?
+c2s11-04.mp3  [opp]  Yes, but my discoveries will continue helping scientists understand Mars.
+c2s11-06.mp3  [shasha]  You will always be remembered!
+

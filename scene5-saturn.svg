@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<title>Saturn V lifting off</title>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d4f9a"/><stop offset=".55" stop-color="#9fb4e6"/><stop offset=".85" stop-color="#f7cfa8"/><stop offset="1" stop-color="#f4b789"/></linearGradient>
+<radialGradient id="fl" cx=".5" cy=".2" r=".8"><stop offset="0" stop-color="#fffbe0"/><stop offset=".35" stop-color="#ffd166"/><stop offset=".7" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff5e3a" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffcf7a" stop-opacity=".8"/><stop offset="1" stop-color="#ffcf7a" stop-opacity="0"/></radialGradient>
+<filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+<filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 .95  0 0 0 0 .9  0 0 0 .08 0"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+<style>
+.rk{animation:up 9s cubic-bezier(.55,0,.75,.4) .8s forwards}
+@keyframes up{to{transform:translateY(-330px)}}
+.fl{transform-origin:200px 262px;animation:fk .12s ease-in-out infinite alternate}
+@keyframes fk{to{transform:scale(1.08,.9)}}
+.sm{transform-box:fill-box;transform-origin:center;animation:puff 6s ease-out forwards;opacity:0}
+.sm:nth-child(2){animation-delay:.3s}.sm:nth-child(3){animation-delay:.6s}.sm:nth-child(4){animation-delay:.2s}.sm:nth-child(5){animation-delay:.5s}.sm:nth-child(6){animation-delay:.9s}
+@keyframes puff{0%{opacity:0;transform:scale(.2)}15%{opacity:.95}100%{opacity:.85;transform:scale(1.5)}}
+.gl{animation:gl 9s ease-in .8s forwards;opacity:.2}@keyframes gl{10%{opacity:1}100%{opacity:.4}}
+.tw{animation:tw 2s ease-in-out infinite alternate}@keyframes tw{to{opacity:.2}}
+</style>
+</defs>
+<rect width="400" height="300" fill="url(#sky)"/>
+<g fill="#fff"><circle class="tw" cx="40" cy="30" r="1.2"/><circle class="tw" cx="320" cy="22" r="1"/><circle class="tw" cx="360" cy="70" r="1.3"/><circle class="tw" cx="90" cy="80" r="1"/></g>
+<path d="M0 262 Q100 252 200 258 T400 256 V300 H0Z" fill="#6f8f7a"/>
+<path d="M0 270 Q120 262 260 270 T400 268 V300 H0Z" fill="#4f6c5b"/>
+<ellipse class="gl" cx="200" cy="262" rx="120" ry="40" fill="url(#glow)"/>
+<g stroke="#c4473a" stroke-width="3" fill="none" stroke-linecap="round">
+<path d="M146 262 V40 M166 262 V40"/><path d="M146 60 L166 80 M166 60 L146 80 M146 100 L166 120 M166 100 L146 120 M146 140 L166 160 M166 140 L146 160 M146 180 L166 200 M166 180 L146 200 M146 220 L166 240 M166 220 L146 240"/>
+<path d="M166 92 H184 M166 150 H184 M166 205 H184" stroke-width="2.5"/>
+</g>
+<g class="rk">
+<g class="fl"><path d="M186 262 Q200 330 214 262Z" fill="url(#fl)"/><path d="M192 262 Q200 300 208 262Z" fill="#fffbe0"/></g>
+<path d="M200 22 V44" stroke="#4a4a5a" stroke-width="2"/><path d="M196 44 L200 34 L204 44Z" fill="#c9c9d2"/>
+<path d="M192 62 L200 44 L208 62Z" fill="#eceff4" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="191" y="62" width="18" height="22" fill="#f5f6f8" stroke="#9aa3b5" stroke-width=".8"/>
+<path d="M191 84 L188 96 H212 L209 84Z" fill="#f5f6f8" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="188" y="96" width="24" height="56" fill="#f8f8fa" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="188" y="112" width="12" height="10" fill="#2b2d3a"/><rect x="200" y="138" width="12" height="10" fill="#2b2d3a"/>
+<path d="M188 152 L185 160 H215 L212 152Z" fill="#e9eaee" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="185" y="160" width="30" height="46" fill="#f8f8fa" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="185" y="160" width="30" height="5" fill="#2b2d3a"/>
+<rect x="185" y="206" width="30" height="50" fill="#f8f8fa" stroke="#9aa3b5" stroke-width=".8"/>
+<rect x="185" y="214" width="15" height="34" fill="#2b2d3a"/><rect x="185" y="206" width="30" height="5" fill="#2b2d3a"/>
+<path d="M185 240 L176 260 H186Z M215 240 L224 260 H214Z" fill="#2b2d3a"/>
+<text x="200" y="196" font-family="Arial,sans-serif" font-size="6" font-weight="700" fill="#2b2d3a" text-anchor="middle" transform="rotate(-90 200 190)">USA</text>
+</g>
+<g filter="url(#soft)" fill="#fdfbf7">
+<circle class="sm" cx="168" cy="262" r="26"/><circle class="sm" cx="232" cy="262" r="28"/><circle class="sm" cx="140" cy="268" r="22"/>
+<circle class="sm" cx="262" cy="268" r="24"/><circle class="sm" cx="200" cy="270" r="24"/><circle class="sm" cx="110" cy="272" r="18"/>
+</g>
+<rect width="400" height="300" fill="#fff" filter="url(#paper)" opacity=".12"/>
+</svg>
