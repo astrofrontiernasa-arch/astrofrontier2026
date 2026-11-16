@@ -35,6 +35,10 @@ Open `index.html` in a web browser (best through a local web server, so the 3D r
 | `voice/` | Recorded narrator and character lines; `voice-lines.txt` lists what each file says |
 | `story-addon-only.html` | The story add-on part of `index.html`, kept separately for reference |
 
+## AI-generated content
+
+The story pictures, videos and character art were made with AI tools, and the website says so on every scene and at the bottom of the home page. NASA photos and facts are real and credited.
+
 ## NASA data and images
 
 NASA facts and images are from NASA / JPL-Caltech and their partners (Cornell, ASU, USGS). Credits are shown on each NASA data card.

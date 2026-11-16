@@ -437,6 +437,8 @@ nav{
 /* =============================================
    FOOTER
    ============================================= */
+#story-engine .af-ai-tag{position:absolute;left:max(16px,env(safe-area-inset-left,0px));top:max(20px,calc(env(safe-area-inset-top,0px) + 20px));z-index:6;pointer-events:none;font:800 .72rem/1 'Nunito',sans-serif;letter-spacing:.03em;color:#fff;background:rgba(7,9,30,.6);border:1px solid rgba(255,255,255,.28);padding:5px 10px 6px;border-radius:999px;text-shadow:0 1px 2px rgba(0,0,0,.6);white-space:nowrap}
+.af-ai-note{font-size:.72rem;color:var(--fg2);font-weight:700;margin:18px auto 0;max-width:420px;text-align:center;line-height:1.5}
 footer{
   position:relative;z-index:1;
   background:var(--bg);
@@ -876,7 +878,10 @@ footer{
 .pb-prev{left:4px}.pb-next{right:4px}.pb-arrow[disabled]{opacity:.3;cursor:default}
 .pb-dots{display:flex;justify-content:center;gap:10px;margin-top:6px}
 .pb-dots button{width:12px;height:12px;border-radius:50%;border:0;background:rgba(255,255,255,.25);cursor:pointer;padding:0}.pb-dots button.on{background:var(--accent);width:30px;border-radius:6px}
-@media(max-width:860px){.pb-slide{grid-template-columns:1fr}.pb-media{position:static}.pb-media model-viewer,.pb-media img{max-height:60vh;aspect-ratio:auto;height:min(80vw,420px)}}
+.pb-slide{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.pb-3d model-viewer{aspect-ratio:auto;height:min(72vh,680px);min-height:420px}
+.pb-photo img{aspect-ratio:auto;height:min(72vh,680px);min-height:420px}
+@media(max-width:860px){.pb-slide{grid-template-columns:1fr}.pb-3d model-viewer,.pb-photo img{height:min(95vw,520px)!important;min-height:300px!important;max-height:none!important}.pb-media{position:static}.pb-media model-viewer,.pb-media img{max-height:60vh;aspect-ratio:auto;height:min(80vw,420px)}}
 @media(max-width:560px){.pb-twins{grid-template-columns:1fr}.pb-arrow{top:200px;width:40px;height:40px}}
 </style>
 <script>
@@ -921,6 +926,7 @@ footer{
   <p style="font-size:.62rem;color:rgba(143,163,208,.4);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:28px;">
     © AstroFrontier · All rights reserved
   </p>
+  <p class="af-ai-note">🤖 This website contains AI-generated content. The story pictures, videos and character art were made with AI tools; NASA photos and facts are credited on each NASA data card.</p>
 </footer>
 
 <!-- =============================================
@@ -944,6 +950,7 @@ footer{
 
   <!-- Close -->
   <button class="story-close" onclick="closeStory()" aria-label="Close story">✕</button>
+  <div class="af-ai-tag">🤖 AI-generated content</div>
 
   <!-- Scroll hint -->
   <div class="story-scroll-hint" id="scroll-hint-inner">
@@ -4227,7 +4234,7 @@ palBtn.addEventListener('pointerenter', () => { palHover = true; }); palBtn.addE
     </svg>
   </div>
   <button type="button" class="jr-go" id="jr-go">🚀 Start the Journey</button>
-  <p class="jr-more">More stations are coming soon ✨ · Tap a planet to visit it again</p>
+  <p class="jr-more">Tap the Moon or Mars to read its story 🪐</p>
 </div>
 <style>
 #chapter-menu{gap:14px!important;justify-content:flex-start!important}
@@ -4255,6 +4262,7 @@ palBtn.addEventListener('pointerenter', () => { palHover = true; }); palBtn.addE
 .jr-go{font:400 clamp(1.1rem,3vw,1.5rem) var(--font-head);color:#1a0a00;background:linear-gradient(135deg,var(--accent),var(--accent2));border:0;border-radius:999px;padding:16px 34px;cursor:pointer;box-shadow:0 6px 30px rgba(255,159,28,.55);animation:afNextPulse 1.7s ease-in-out infinite}
 .jr-go:disabled{opacity:.5;cursor:default;animation:none}
 .jr-more{color:var(--fg2);font-weight:700;font-size:.85rem;margin:0}
+#story-engine .story-nav-btn:disabled{visibility:hidden}
 @media (prefers-reduced-motion:reduce){.jr-st.next .jr-halo,.jr-go{animation:none}}
 </style>
 <script>
@@ -4275,12 +4283,14 @@ palBtn.addEventListener('pointerenter', () => { palHover = true; }); palBtn.addE
   }
   var segs = [document.getElementById('jr-seg1'), document.getElementById('jr-seg2')], rocket = document.getElementById('jr-rocket'), trail = document.getElementById('jr-trail');
   var stations = menu.querySelectorAll('.jr-st'), goBtn = document.getElementById('jr-go'), status = document.getElementById('jr-status');
-  function getAt() { try { var v = localStorage.getItem('af-jat'); return v == null ? getDone() : Math.min(2, +v || 0); } catch (e) { return window.__jrAt != null ? window.__jrAt : getDone(); } }
-  function setAt(i) { window.__jrAt = i; try { localStorage.setItem('af-jat', i); } catch (e) {} }
-  function getFin() { try { return +localStorage.getItem('af-jfin') || 0; } catch (e) { return window.__jrFin || 0; } }
-  function setFin(n) { window.__jrFin = Math.max(window.__jrFin || 0, n); try { localStorage.setItem('af-jfin', Math.max(getFin(), n)); } catch (e) {} }
-  function getDone() { try { return Math.min(2, +localStorage.getItem(KEY) || 0); } catch (e) { return window.__jrDone || 0; } }
-  function setDone(n) { window.__jrDone = Math.max(window.__jrDone || 0, n); try { localStorage.setItem(KEY, Math.max(getDone(), n)); } catch (e) {} }
+  /* the journey is remembered only while the page is open: every new visit starts on Earth with "Start the Journey" */
+  try { ['af-jat', 'af-jfin', KEY].forEach(function (k) { localStorage.removeItem(k); }); } catch (e) {}
+  var J = {done: 0, fin: 0};
+  function setAt(i) { at = i; }
+  function getFin() { return J.fin; }
+  function setFin(n) { J.fin = Math.max(J.fin, n); }
+  function getDone() { return J.done; }
+  function setDone(n) { J.done = Math.min(2, Math.max(J.done, n)); }
   var at = 0, flying = false;
   function putRocket(x, y, ang) { rocket.setAttribute('transform', 'translate(' + x + ' ' + (y - 0) + ') rotate(' + ang + ')'); }
   function park(i) { var tall = svg.getAttribute('viewBox').indexOf('1300') > 0; putRocket(ST[i][0] + (tall ? 120 : 0), ST[i][1] - (tall ? 40 : (i === 1 ? 82 : 92)), 0); }
@@ -4291,8 +4301,7 @@ palBtn.addEventListener('pointerenter', () => { palHover = true; }); palBtn.addE
     segs[0].classList.toggle('done', d >= 1); segs[1].classList.toggle('done', d >= 2);
     if (at === 0) { status.textContent = d ? 'Back at home base. Where to next?' : 'Three stations are waiting. Press the button to launch!'; goBtn.textContent = '🚀 Start the Journey'; }
     else if (at === 1) { status.textContent = 'You are at the Moon station! 🌕 Next stop: Mars.'; goBtn.textContent = '🚀 Fly to Mars'; }
-    else if (getFin() >= 2) { status.textContent = 'Journey complete! 🎉 You visited the Moon and Mars.'; goBtn.textContent = '🔁 Fly the journey again'; }
-    else { status.textContent = 'You are at the Mars station! 🔴 Finish the Mars story to complete your journey.'; goBtn.textContent = '🔴 Continue the Mars story'; }
+    else { status.textContent = getFin() >= 2 ? 'Journey complete! 🎉 You visited the Moon and Mars.' : 'You are at the Mars station! 🔴 Tap Mars to visit it again.'; goBtn.textContent = '🔁 Fly the journey again'; }
   }
   /* fly the rocket along the curved path(s) from station a to station b */
   function fly(a, b, done) {
@@ -4315,10 +4324,10 @@ palBtn.addEventListener('pointerenter', () => { palHover = true; }); palBtn.addE
   }
   function startNow(n) { if (window.AFSetChapter) { if (!window.AFSetChapter(n)) return; } closeChapterMenu(); openStory(); }
   function visit(i) { if (flying) return; if (i === 0) { fly(at, 0, function () {}); return; } fly(at, i, function () { startNow(i); }); }
-  goBtn.addEventListener('click', function () { if (flying) return; if (at >= 2) { if (getFin() >= 2) fly(at, 0, function () { visit(1); }); else startNow(2); } else visit(at + 1); });
+  goBtn.addEventListener('click', function () { if (flying) return; if (at >= 2) fly(at, 0, function () { visit(1); }); else visit(at + 1); });
   stations.forEach(function (g) { var i = +g.dataset.i; g.addEventListener('click', function () { visit(i); }); g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); visit(i); } }); });
   addEventListener('resize', function () { if (!flying) { layout(); park(at); } });
-  window.openChapterMenu = function () { layout(); if (!flying) { at = getFin() >= 2 ? 2 : 0; park(at); }   /* from the home page the rocket starts on Earth, unless Mars has been finished */ render(); menu.classList.add('open'); menu.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { goBtn.focus(); }, 60); };
+  window.openChapterMenu = function () { layout(); if (!flying) park(at);   /* the rocket waits where the reader left it during this visit */ render(); menu.classList.add('open'); menu.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { goBtn.focus(); }, 60); };
   window.closeChapterMenu = function () { menu.classList.remove('open'); menu.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; };
   window.startChapter = startNow;
   /* called by the story when a chapter's last page has been read */
